@@ -8,3 +8,5 @@ Enable mochajs as a compiler:
     :compiler mochajs
 
 `after/ftplugin/js.vim` automatically sets mochajs as the compiler for all js projects.
+
+NOTE: Requires mocha output to use 'tap' reporter
