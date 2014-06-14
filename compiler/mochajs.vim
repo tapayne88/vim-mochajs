@@ -17,6 +17,6 @@ CompilerSet makeprg=mocha\ $*
 
 CompilerSet errorformat=
             \%Enot\ ok\ %n%.%#,
-            \%Z%.%#at\ \Context%.%#\ (\/var\/lamp\/code\/lamp\/%f:%l:%c),
+            \%Z%.%#at\ \Context%.%#\ (%f:%l:%c),
             \%C%m,
             \%-G%.%#
