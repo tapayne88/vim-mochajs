@@ -13,10 +13,19 @@ if exists(":CompilerSet") != 2  " older Vim always used :setlocal
   command -nargs=* CompilerSet setlocal <args>
 endif
 
-CompilerSet makeprg=mocha\ $*
+let s:cpo_save = &cpo
+set cpo-=C
 
+CompilerSet makeprg=mocha
 CompilerSet errorformat=
             \%Enot\ ok\ %n%.%#,
-            \%Z%.%#at\ \Context%.%#\ (%f:%l:%c),
-            \%C%m,
-            \%-G%.%#
+            \%Z\ %#at\ Context%.%#\ (%f:%l:%c),
+            \%Z\ %#at\ null%.%#\ (%f:%l:%c),
+            \%C\ %#%m,
+            \%-G1%.%#,
+            \%-G\ %#at%.%#,
+            \%-Gok%.%#,
+            \%-G#%.%#
+
+let &cpo = s:cpo_save
+unlet s:cpo_save
