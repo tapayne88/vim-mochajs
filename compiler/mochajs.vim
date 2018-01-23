@@ -19,8 +19,7 @@ set cpo-=C
 CompilerSet makeprg=mocha
 CompilerSet errorformat=
             \%Enot\ ok\ %n%.%#,
-            \%Z\ %#at\ Context%.%#\ (%f:%l:%c),
-            \%Z\ %#at\ null%.%#\ (%f:%l:%c),
+            \%Z\ %#at\ %.%#\ (%f:%l:%c),
             \%C\ %#%m,
             \%-G1%.%#,
             \%-G\ %#at%.%#,
